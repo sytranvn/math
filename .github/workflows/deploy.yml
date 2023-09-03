@@ -28,7 +28,8 @@ jobs:
 
       - name: build
         env:
-          BASE_PATH: 'https://sytranvn.dev/math'
+          RSS_LINK: 'https://sytranvn.dev/math'
+          BASE_URL: '/math'
         run: |
           npm run build
           touch build/.nojekyll

@@ -1,7 +1,6 @@
 <script>
 	import Math from '$lib/components/Math.svelte';
 	export let data;
-	console.log(data.sources);
 </script>
 
 <ol>

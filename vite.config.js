@@ -31,7 +31,7 @@ pages = await Promise.all(pages
 
 export default defineConfig(({ mode }) => {
 	const env = loadEnv(mode, process.cwd(), '')
-	const BASE_URL = env.BASE_URL
+	const RSS_LINK = env.RSS_LINK
 
 	return {
 		plugins: [
@@ -40,12 +40,14 @@ export default defineConfig(({ mode }) => {
 				mode: "define",
 				channel: {
 					title: "Sy Tran - Math",
-					link: BASE_URL,
+					link: RSS_LINK,
 					lastBuildDate: new Date(),
 					description: `Recent change on Sy Tran - Math`
 				},
-				items: pages.map(page => ({ link: `${BASE_URL}/${page.name}`, pubDate: page.pubDate })),
-			})]
+				items: pages.map(page => {
+					console.log(`${RSS_LINK}/${page.name}`)
+					return { link: `${RSS_LINK}/${page.name}`, pubDate: page.pubDate }}),
+			})],
 	}
 })
 
