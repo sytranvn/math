@@ -42,7 +42,7 @@ export default defineConfig(({ mode }) => {
 					title: "Sy Tran - Math",
 					link: BASE_URL,
 					lastBuildDate: new Date(),
-					description: `Recent change on ${BASE_URL}`
+					description: `Recent change on Sy Tran - Math`
 				},
 				items: pages.map(page => ({ link: `${BASE_URL}/${page.name}`, pubDate: page.pubDate })),
 			})]
