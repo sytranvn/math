@@ -1,0 +1,56 @@
+\begin{aligned}
+&\begin{cases}
+ x_1 &+&   x_2 &-& 2 x_3 &-& 6 x_4 &=& 0 \\
+ x_1 &-&   x_2 &-& 4 x_3 &+& 2 x_4 &=& 0 \\
+2x_1 &+&   x_2 &-& 5 x_3 &-& 8 x_4 &=& 0 \\
+3x_1 &+& 2 x_2 &-& 7 x_3 &-& 14x_4 &=& 0 \\
+\end{cases} \\
+&A = \begin{bmatrix}
+1 &  1 &  -2 & - 6   \\
+1 & -1 &  -4 &   2   \\
+2 &  1 &  -5 & - 8   \\
+3 &  2 &  -7 & - 14  \\
+\end{bmatrix}
+
+\xrightarrow
+  [(4) := (4) - 3(1)]
+  {\substack{(2):=(2) - (1) \\
+             (3) := (3) - 2(1) }}
+
+\begin{bmatrix}
+1 &  1 &  -2 & - 6  \\
+0 & -2 &  -2 &   8  \\
+0 & -1 &  -1 &   4  \\
+0 & -1 &  -1 &   4  \\
+\end{bmatrix}
+
+\\
+
+&\xrightarrow
+  [(4) := (4) - \frac{1}{2}(2)]
+  {(3) := (3) - \frac{1}{2}(2)}
+
+\begin{bmatrix}
+1 &  1 &  -2 & - 6  \\
+0 & -2 &  -2 &   8  \\
+0 &  0 &   0 &   0  \\
+0 &  0 &   0 &   0  \\
+\end{bmatrix} \\
+
+&\text{Let: } x_3 = m, x_4 = n; m,n \in \R \\
+
+&\rArr \begin{cases}
+x_1  + x_2   -2m  - 6n = 0  \\
+  -2 x_2  -2m +   8n = 0 \\
+x_3 = m \\
+x_4 = n \\
+  \end{cases}
+
+  \lrArr \begin{cases}
+x_1   =  m  + 10n  \\
+ x_2  = m -   4n  \\
+x_3 = m \\
+x_4 = n \\
+  \end{cases}
+
+\end{aligned}

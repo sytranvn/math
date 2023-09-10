@@ -1,0 +1,38 @@
+
+\begin{cases}
+  1 x_1 &    +2x_2 &   -3x_3 & + 5x_4 & = 1   \\
+  1 x_1 &    +3x_2 &  -13x_3 & +22x_4 & = -1  \\
+  3 x_1 &    +5x_2 &   + x_3 & - 2x_4 & = 5   \\
+  2 x_1 &    +3x_2 &   +4x_3 & - 7x_4 & = 4   \\
+\end{cases} \\
+\overline{A} = \begin{pmatrix}
+\begin{array}{c c c c | c}
+1 & 2 &  -3 &   5& 1   \\   
+1 & 3 & -13 &  22& -1  \\
+3 & 5 &   1 & - 2& 5   \\
+2 & 3 &   4 & - 7& 4   \\
+\end{array}
+\end{pmatrix} \\
+\xrightarrow[\substack{(3):=(3)-3(1) \\ (4):=(4)-2(1)}]{(2):=(2)-(1)} \begin{pmatrix}
+\begin{array}{c c c c | c}
+1 & 2 &  -3 &   5& 1   \\   
+0 &  1& -10 & 17 & -2  \\
+0 & -1&  10 &-17 &  2  \\
+0 & -1&  10 &-17 &  2  \\
+\end{array}
+\end{pmatrix} \\
+\xrightarrow[(4):=(4)+(2)]{(3):=(3)+(2)}\begin{pmatrix}
+\begin{array}{c c c c | c}
+1 & 2 &  -3 &   5& 1   \\   
+0 &  1& -10 & 17 & -2  \\
+0 &  0&   0 &  0 &  0  \\
+0 &  0&   0 &  0 &  0  \\
+\end{array}
+\end{pmatrix} \\
+\text{Let: } x_3 = m, x_4 =n; m,n \in \R \\
+\rArr \begin{cases}
+x_1 &        &      &     & = &5 -17m  -29n \\
+    & x_2    &      &     & = &-2+ 10m -17n \\
+    &        & x_3  &     & = &m \\
+    &        &      &x_4  & = &n \\
+\end{cases}

@@ -1,28 +1,8 @@
 <script>
-	import Math from '$lib/components/Math.svelte';
+	import Child from '$lib/components/Child.svelte';
+	import Children from '$lib/components/Children.svelte';
+
 	export let data;
 </script>
 
-<ol>
-	{#each data.sources as file}
-		<li>
-			&nbsp;
-			{#if Array.isArray(file)}
-				<ol>
-					{#each file as subfile}
-						<li style="list-style: lower-alpha;">
-							&nbsp;
-							<p>
-								<Math source={subfile.source} />
-							</p>
-						</li>
-					{/each}
-				</ol>
-			{:else}
-				<p>
-					<Math source={file.source} />
-				</p>
-			{/if}
-		</li>
-	{/each}
-</ol>
+<Children children={data.children} Component={Child} />
